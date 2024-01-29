@@ -1,5 +1,5 @@
 <template>
-  <div  class="todo_item" @click="removeTodo" @dblclick="changeTodo">
+  <div  class="todo_item" @click="removeTodo" @dblclick="changeTodo" :class="(completed ? 'green' : 'red')">
        <h1>{{ title }}</h1>
 </div>
   
@@ -20,4 +20,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.green {
+       background-color: green;
+}
+.red {
+       background-color: red;
+}
+
+
+</style>
